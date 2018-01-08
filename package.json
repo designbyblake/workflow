@@ -53,7 +53,7 @@
         "scrollmonitor": "^1.2.4",
         "slimerjs": "^0.10.3",
         "svgo": "^1.0.3",
-        "uglifyjs": "^2.4.11",
+        "uglify-js": "^2.4.11",
         "waypoints": "^4.0.1"
     },
     "scripts": {
