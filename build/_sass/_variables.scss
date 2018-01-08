@@ -1,0 +1,58 @@
+//Colors
+$base: #333;
+$primary: #d13239;
+$secondary: #387F99;
+$tertiary: #31817D;
+//Image path
+$imagePath: '/wp-content/themes/fishbowl/assets/img/';
+$imageTemp: $imagePath+'temp/';
+//Font path
+$fontPath: '/wp-content/themes/fishbowl/assets/fonts';
+//Fonts
+$sans: 'Avenir W01',
+"Avenir 55 Roman",
+"Lucida Grande",
+"Lucida Sans Unicode",
+"Trebuchet MS",
+sans-serif;
+$serif: 'Linotype Didot W02',
+"Didot LT STD",
+"Hoefler Text",
+Garamond,
+"Times New Roman",
+serif;
+$basefont: 18;
+@function fs($fs) {
+    @return #{$fs/$basefont}em;
+}
+
+//Icons
+$icon-ext: 39saqy;
+$icon-twitter: "\f099";
+$icon-facebook: "\f09a";
+$icon-google: "\f0d5";
+$icon-linkedin: "\f0e1";
+$icon-angle-left: "\f104";
+$icon-angle-right: "\f105";
+$icon-angle-up: "\f106";
+$icon-angle-down: "\f107";
+$icon-play: "\f144";
+$icon-youtube: "\f16a";
+$icon-vimeo: "\f27d";
+$icon-search: "\e900";
+$icon-logo-path1: "\e901";
+$icon-logo-path2: "\e902";
+$icon-logo-path3: "\e903";
+$icon-logo-path4: "\e904";
+$icon-logo-path5: "\e905";
+$icon-logo-path6: "\e906";
+$icon-logo-path7: "\e907";
+$icon-logo-path8: "\e908";
+$icon-logo-path9: "\e909";
+$icon-logo-path10: "\e90a";
+$icon-logo-path11: "\e90b";
+$icon-logo-path12: "\e90c";
+$icon-logo-path13: "\e90d";
+$icon-logo-path14: "\e90e";
+$icon-close: "\e90f";
+$icon-arrow-right: "\e910";

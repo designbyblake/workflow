@@ -1,0 +1,502 @@
+body#tinymce{
+	font-size:18px;
+	font-family:'Lato', sans-serif;
+	font-feature-settings:"liga" 0;
+	font-weight: 300;
+	line-height: 1.6;
+	color:#343434;
+}
+.content {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	
+	@include mq($min, $palm) {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	h1, h2{
+		color: #21201e;
+		font-size:fs(22);
+		font-weight: 600;
+		line-height: 1.65;
+		margin:0 0 15px;
+
+		@include mq($min, $palm) {
+			font-size: fs(27);
+			line-height: 1.22;
+			margin:0 0 32px;
+		}
+
+		@include mq($min, $desktop) {
+			font-size: fs(32);
+			line-height: 1.15;
+		}
+
+		@media print {
+			font-size: fs(24);
+		}
+	}
+
+
+	h3 {
+		font-size:fs(19);
+		font-weight: 600;
+		line-height: 1.5;
+		color: #21201e;
+		margin-bottom: 20px;
+
+		@include mq($min, $palm) {
+			font-size: fs(23);
+		}
+
+		@include mq($min, $desktop) {
+			font-size: fs(24);
+
+		}
+	}
+	
+	h4 {
+		font-size:fs(17);
+		font-weight: 600;
+		line-height: 1.4;
+		color: #21201e;
+		margin-bottom: 15px;
+		text-transform: none;
+
+		@include mq($min, $palm) {
+			font-size: fs(18);
+			line-height: 1.3;
+		}
+
+	}
+	
+	h5, h6 {
+		font-size:fs(15);
+		font-weight: 600;
+		line-height: 1.2;
+		color: #21201e;
+		margin-bottom: 12px;
+
+		@include mq($min, $palm) {
+			font-size: fs(16);
+		}
+	}
+
+	p {
+		margin-bottom: 34px;
+		font-size: fs(18);
+		font-weight: 300;
+		line-height: 1.6;
+		color: #21201e;
+	}
+
+	
+	ul, ol {
+		line-height: 1.666666667;
+		margin-bottom: 30px;
+		color: #3c3d3e;
+		font-size: fs(18);
+		font-weight: 300;
+		padding-left: 25px;
+
+		li {
+			font-size: 1em;
+			position: relative;
+			margin-bottom: 9px;
+			padding-left: 15px;
+			list-style: none;
+
+			* {
+				font-size: 1em;
+			}
+
+			ul, ol {
+				margin: 10px 0 20px 0px;
+			}
+		}
+	}
+
+	ul {
+		
+		li {
+
+			&:before {
+				content: "•";
+				position: absolute;
+				left: 0px;
+				top: 2px;
+				font-size: 15px;
+				color:$primary;
+			}
+
+			li {
+				&:before {
+					content:'○';
+					font-size:8px;
+					left: 0;
+					top:10px;
+				}
+			}
+		}
+	}
+
+	ol {
+		padding-left: 25px;
+		counter-reset: li;
+		li {
+			padding-left: 25px;
+		}
+		> li:before {
+			position: absolute;
+			content: counter(li)".";
+			counter-increment: li;
+			left: 0;
+			color:$primary;
+			top: -1px;
+			font-weight: 300;
+			text-align: right;
+		}
+	}
+
+	table {
+		width: 100%;
+		line-height: 1.3;
+		margin-bottom: 47px;
+		border: 1px solid rgba(lighten($base, 20%), .8);
+		border-collapse: separate;
+		border-spacing: 5px;
+
+
+		> * {
+			font-size: 1em;
+		}
+
+		th,td {
+			padding: 19px 8px;
+			@include mq($min, $post-palm){
+				padding: 19px;
+			}
+		}
+		
+		.tablesaw-cell-label {
+			font-family: $sans;
+			font-weight: normal;
+		}
+
+		th {
+			font-family: $sans;
+			background: darken(#fff, 8%);
+		}
+
+		tr:nth-child(even) {
+			background: darken(#fff, 8%);
+		}
+	}
+
+	.column {
+		&__headline {
+		}
+
+		&__img {
+			max-width: 150px;
+			display: block;
+			margin: 0 auto 30px;
+
+			@media print {
+				max-width: 100px;
+			}
+		}
+
+		&__text {
+			ul {
+				padding-left: 0;
+			}
+		}
+	}
+
+	&.section {
+		blockquote {
+			margin-bottom: 0;
+		}
+
+		&.section--green, &.section--blue { 
+			blockquote {
+				p {
+					color: #fff;
+
+					&:first-of-type {
+						&:before, &:after {
+							color: #fff;
+						}
+					}
+				}
+
+				footer {
+					color: #fff;
+				}
+			}
+		}
+	}
+
+	blockquote {
+		margin: 40px 0;
+		position: relative;
+
+		@media print {
+			margin: 0;
+		}
+
+		p {
+			font-size: fs(20);
+			line-height: 1.35;
+			margin-bottom: 0;
+			font-weight: 300;
+			letter-spacing: .003em;
+			padding: 0;
+			text-align: center;
+
+			
+
+			@include mq($min, $palm) {
+				font-size: fs(26);
+				padding: 0 100px;
+				
+			}
+
+			@include mq($min, $desktop) {
+				font-size: fs(33);
+				padding: 0 100px;
+				text-align: center;
+			}
+			&:first-of-type {
+				&:before, &:after {
+					color: lighten($base, 60%);
+					position: absolute;
+					font: 100px Didot,Georgia,serif;
+					top: -10px;
+
+					@include mq($max, $palm) {
+						left: 50%;
+						transform: translateX(-50%);
+					}
+				}
+			}
+			&:first-of-type:before {
+				content: "\201C";
+				@include mq($max, $palm) {
+					top: -60px;
+				}
+
+				@include mq($min, $palm) {
+					left: 40px;	
+				}
+
+				@media print {
+					left: 40px;
+				}
+				
+			}
+			&:first-of-type:after {
+				content: "\201D";
+
+				@include mq($max, $palm) {
+					position: static;
+					display: block;
+					text-align: center;
+					line-height: .5;
+					margin-top: 30px;
+					transform: none;
+				}
+				
+				@include mq($min, $palm) {
+					right: 40px;
+				}
+
+				@media print {
+					right: 40px;
+				}	
+			}
+
+			&:last-of-type {
+				margin-bottom: 10px;
+			}
+		}
+
+		footer {
+			font-size: 1em;
+			font-weight: 700;
+			color: $tertiary;
+			margin-top: -30px;
+			text-align: center;
+
+
+			@include mq($min, $palm) {
+				font-size: 1em;
+				margin-top: 20px;
+			}
+
+			@media print {
+				margin-top: 20px;
+			}
+		}
+
+		cite {
+			font-style: normal;
+
+			span {
+				font-weight: 400;
+			}
+		}
+	}
+	
+	hr {
+		margin-bottom: 30px;
+	}
+
+	a:not(.btn) {
+		display: inline-block;
+		position: relative;
+		color: darken($primary, 3%);
+
+		&:after {
+			content:"";
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			bottom: 0;
+			left: 0;
+			background: darken($primary, 3%);
+			transition: all .125s;
+		}
+		
+
+		&:hover, &:focus {
+			color: #000;
+			&:after {
+				height: 3px;
+			}
+			
+		}
+	}
+
+	img {
+		//border: 6px solid lighten($base, 73.5%); //eee
+		margin-bottom: 29px;
+		max-width: 100%;
+		height: auto;
+
+		&.alignright{
+			display: block;
+			float: none;
+			@include mq($min, $palm){
+				float:right;
+				margin:0 0 29px 29px;
+			}
+
+			@media print {
+				float:right;
+				margin:0 0 29px 29px;
+			}
+		}
+
+		&.alignleft{
+			display: block;
+			float: none;
+			@include mq($min, $palm){
+				float:left;
+				margin:0 29px 29px 0;
+			}
+
+			@media print {
+				float:left;
+				margin:0 29px 29px 0;
+			}
+		}
+
+		&.aligncenter{
+			display: block;
+			margin:auto;
+		}
+
+
+	}
+
+	figcaption {
+		font-size: 1.2em; 
+		margin-top: 5px;
+	}
+
+	sub {
+		vertical-align: sub;
+		font-size: 75%;
+	}
+
+	sup {
+		vertical-align: super;
+		font-size: 75%;
+	}
+
+	.model-video {
+		width: 100%;
+		margin: 0 0 29px;
+		border: 6px solid lighten($base, 73.5%); //eee
+
+		img {
+			border: 0;
+			position: absolute;
+			width: 100%;
+			top: 50%;
+			transform: translateY(-50%);
+			pointer-events: none;
+		}
+	}
+
+	.media-menu {
+		margin-bottom: 50px;
+		@include mq($min, $palm) {
+			margin-left: -10px;
+			margin-right: -10px;
+		}
+
+		&__item {
+			display: flex;
+			flex: 1;
+			padding: 0;
+
+			&:before {
+				display: none;
+			}
+
+			@include mq($min, $palm) {
+				margin: 0 10px;
+			}
+		}
+		.btn {
+			display: flex;
+			flex: 1;
+			text-align: center;
+			justify-content: center;
+			flex-direction: column;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+
+	//fix for partners page open table - only one that's a link
+	.partner-opentable {
+		@include mq($min, $palm) {
+			float: left;
+			margin-right: 30px;
+		}
+		img {
+			margin-right: 0;
+		}
+	}
+}
+
+@media print {
+	iframe[src^="https://www.youtube"] {
+		display: none;
+
+	}
+}

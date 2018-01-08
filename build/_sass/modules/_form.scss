@@ -1,0 +1,177 @@
+.form {
+    @media print {
+        display: none;
+    }
+    ::-webkit-input-placeholder {
+        // Chrome/Opera/Safari 
+        color: $base;
+    }
+    ::-moz-placeholder {
+        // Firefox 19+ */
+        color: $base;
+        opacity: 1;
+    }
+    :-ms-input-placeholder {
+        // IE 10+ */
+        color: $base;
+    }
+    :-moz-placeholder {
+        // Firefox 18- */
+        color: $base;
+    }
+    &.form--alt {
+        [class*="form__input"] {
+            background-color: lighten($base, 78%); //fafafa
+        }
+    }
+    &--search {
+        position: relative;
+    }
+    &__row {
+        @extend .clearfix;
+        margin-bottom: 22px;
+        @include mq($min, $palm) {
+            margin-bottom: 13px;
+        }
+        &--btn {
+            margin-top: 35px;
+            @include mq($min, $palm) {
+                text-align: right;
+            }
+        }
+    }
+    &__label {
+        letter-spacing: .025em;
+        font-size: 1.067em; //16.005px
+        font-weight: 400;
+        display: block;
+        margin-bottom: 6px;
+        line-height: 1.2;
+    }
+    label.error {
+        color: $secondary;
+        font-size: 1.4em;
+        margin-top: 2px;
+        display: block;
+        padding-left: 10px;
+    }
+    &__input--text {
+        background: #fff;
+        border: 0;
+        width: 100%;
+        padding: 10px 26px;
+        border: 1px solid lighten($base, 47.5%); //acacac
+        min-height: 50px;
+        font-size: .9em;
+        font-weight: 400;
+        color: $base;
+        -webkit-appearance: none;
+        &:focus {
+            border-width: 4px;
+            padding: 7px 23px;
+            outline: none;
+        }
+        .form--search & {
+            border-color: transparent;
+            background-color: rgba(#fff, .8);
+            border-radius: 3px;
+            &:focus {
+                border-width: 1px;
+                background-color: #fff;
+                padding: 7px 26px;
+            }
+        }
+        .menu__search & {
+            border-radius: 0;
+        }
+        +.form__input--text,
+        +label.error+.form__input--text {
+            margin-top: 10px;
+        }
+    }
+    &__input--textarea {
+        background: #fff;
+        color: $base;
+        font-size: .9em;
+        border: 0;
+        width: 100%;
+        padding: 15px;
+        border: 1px solid lighten($base, 47.5%);
+        min-height: 157px;
+        resize: none;
+        overflow: hidden;
+        &:focus {
+            border-width: 4px;
+            padding: 13px;
+            outline: none;
+        }
+    }
+    &__input--select {
+        min-height: 50px;
+        width: 100%;
+        border: 1px solid lighten($base, 47.5%);
+        background: url(#{$imagePath}select-bg.png) no-repeat calc(100% - 20px) 50% #fff;
+        padding-left: 20px;
+        padding-right: 30px;
+        color: $base;
+        font-weight: 500;
+        font-size: .9em;
+        font-family: 'Lato', sans-serif;
+        border-radius: 3px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+
+        @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+            // d IE10+ specific styles go here */  
+            background: url(#{$imagePath}select-bg.png) no-repeat 97% 50% #fff;
+        }
+        &:focus {
+            border-width: 4px;
+            outline: none;
+        }
+        &::-ms-expand {
+            display: none;
+        }
+        .list-search & {
+            border-color: transparent;
+            background-color: rgba(#fff, .8);
+            &:focus {
+                border-width: 1px;
+                background-color: #fff;
+            }
+        }
+    }
+    &__col {
+        float: left;
+        margin-bottom: 22px;
+        width: 100%;
+        .list-search & {
+            margin-bottom: 11px;
+        }
+        @include mq($max, $palm) {
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+        &--half {
+            @include mq($min, $palm) {
+                width: 47%;
+                margin-left: 6%;
+                &:first-of-type {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    &__required {
+        font-weight: 400;
+        text-transform: none;
+        margin-right: 3px;
+    }
+}
+
+@-moz-document url-prefix() {
+    select {
+        padding-top: 16px;
+    }
+}

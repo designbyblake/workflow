@@ -1,0 +1,143 @@
+.page-nav {
+	background: darken($primary, 1.2%); //#cf2e35;
+	padding: 25px 0;
+
+	@include mq($min, $tablet) { 
+		padding: 0;
+	}
+
+	@media print {
+		display: none;
+	}
+
+	&__toggle {
+		margin: 0 30px;
+		min-height: 50px;
+		width: calc(100% - 60px);
+		background: url(#{$imagePath}select-bg.png) no-repeat 97% 50% rgba(#fff, .8);
+		padding-left: 20px;
+		padding-right: 30px;
+		color: $base;
+		font-size: .9em;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-align: left;
+		border-radius: 3px;
+		-webkit-appearance: none;
+
+		&--open {
+			border-radius: 3px 3px 0 0;
+		}
+
+		@include mq($min, $tablet) { 
+			display: none;
+		}
+	}
+
+	&__items {
+		background: rgba(#fff, .11);
+		border-radius: 0 0 3px 3px;
+		margin: 0 30px;
+		width: calc(100% - 60px);
+		max-width: 960px;
+		
+		@include mq($min, $tablet) { 
+			background: none;
+			border-radius: 0;
+			display: flex;
+			justify-content: center;
+			align-content: center;
+			margin: 0 auto;
+			width: auto;
+			padding-bottom: 0;
+		}
+
+		@include mq($max, $pre-tablet) { 
+			max-height: 0;
+			overflow: hidden;
+			margin-top: 1px;
+			transition: max-height .35s ease, padding .1s ease;
+			
+			&.submenu-open {
+				max-height: 1000px;
+				padding-bottom: 10px;
+				transition: max-height 1s ease, padding .1s ease;
+			}
+		}
+		
+		
+	}
+
+	&__item {
+		color: #fff;
+		text-align: center;
+		font-size: .9em;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: .06em;
+		padding: 37px;
+		border-bottom: 1px solid lighten($primary, 13%); //dd686d
+		position: relative;
+		transition: all .25s ease-in-out;
+		flex-grow: 1;
+		max-width: 250px;
+
+		&:first-of-type {
+			&:before {
+				display: none;
+			}		
+		}
+
+		&:before {
+			content:"";
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+			width: 1px;
+			height: 35px;
+			background:lighten($primary, 5%);
+
+
+		}
+
+		&:after {
+			content:"";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 0;
+			background:lighten($primary, 13%);
+			opacity: 0;
+			transition: all .25s ease-in-out;
+		}
+
+
+		@include mq($max, $pre-tablet) { 
+			display: block;
+			padding: 12px 20px;
+			max-width: none;
+		}
+
+		&:hover, &:focus, &--active {
+			color: #fff;
+			background: rgba(darken($primary, 7.5%), .7); //b43243
+
+			&:after {
+				height: 2px;
+				opacity: 1;
+			}
+
+			@include mq($min, $tablet) {
+				background-color: lighten($primary, 5%);//#cf3f52;
+
+				&:after {
+					background:rgba(#fff, .4);
+					height: 6px;
+					bottom: -1px;
+				}
+			}
+		}
+	}
+}

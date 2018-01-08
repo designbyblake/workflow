@@ -1,0 +1,35 @@
+{% extends "_base.twig" %}
+
+{% block title %}
+    <title></title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffd200">
+	<meta name="theme-color" content="#ffffff">
+    <meta name="title" content="" />
+	<meta name="description" content="" />
+	<meta property="og:title" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:secure_url" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@" />
+    <link rel="canonical" href="">
+{% endblock %}
+
+{% block content %}
+	<main class="sections" id="sections">
+		<h1>Test Twig Rendering</h1>
+		<div class="panels"> 
+		{% include './_partial/_section2.twig' %}
+		{% include './_partial/_section4.twig' %}
+		</div>
+	</main>
+{% endblock %} 
+
+

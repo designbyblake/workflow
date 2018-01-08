@@ -1,0 +1,9 @@
+{
+    "people": [{
+            "name": "Person 1 Name"
+        },
+        {
+            "name": "Person 2 Name"
+        }
+    ]
+}

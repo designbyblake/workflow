@@ -1,0 +1,12 @@
+{
+    "facts": [{
+            "text": "Fact 1"
+        },
+        {
+            "text": "Fact 2"
+        },
+        {
+            "text": "Fact 3"
+        }
+    ]
+}

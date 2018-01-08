@@ -1,0 +1,210 @@
+@font-face {
+    font-family: 'icomoon';
+    src : url('#{$fontPath}/icomoon.ttf?#{$icon-ext}') format('truetype'),
+    url('#{$fontPath}/icomoon.woff?#{$icon-ext}') format('woff'),
+    url('#{$fontPath}/icomoon.svg?#{$icon-ext}#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    // use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    // Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-logo .path1 {
+    &:before {
+        content: $icon-logo-path1;
+    }
+}
+
+.icon-logo .path2 {
+    &:before {
+        content: $icon-logo-path2;
+        margin-left: -4.8876953125em;
+    }
+}
+
+.icon-logo .path3 {
+    &:before {
+        content: $icon-logo-path3;
+        margin-left: -4.8876953125em;
+    }
+}
+
+.icon-logo .path4 {
+    &:before {
+        content: $icon-logo-path4;
+        margin-left: -4.8876953125em;
+    }
+}
+
+.icon-logo .path5 {
+    &:before {
+        content: $icon-logo-path5;
+        margin-left: -4.8876953125em;
+    }
+}
+
+.icon-logo .path6 {
+    &:before {
+        content: $icon-logo-path6;
+        margin-left: -4.8876953125em;
+    }
+}
+
+.icon-logo .path7 {
+    &:before {
+        content: $icon-logo-path7;
+        margin-left: -4.8876953125em;
+    }
+}
+
+.icon-logo .path8 {
+    &:before {
+        content: $icon-logo-path8;
+        margin-left: -4.8876953125em;
+        color: rgb(209, 50, 57);
+    }
+}
+
+.icon-logo .path9 {
+    &:before {
+        content: $icon-logo-path9;
+        margin-left: -4.8876953125em;
+        color: rgb(209, 50, 57);
+    }
+}
+
+.icon-logo .path10 {
+    &:before {
+        content: $icon-logo-path10;
+        margin-left: -4.8876953125em;
+        color: rgb(209, 50, 57);
+    }
+}
+
+.icon-logo .path11 {
+    &:before {
+        content: $icon-logo-path11;
+        margin-left: -4.8876953125em;
+        color: rgb(209, 50, 57);
+    }
+}
+
+.icon-logo .path12 {
+    &:before {
+        content: $icon-logo-path12;
+        margin-left: -4.8876953125em;
+        color: rgb(209, 50, 57);
+    }
+}
+
+.icon-logo .path13 {
+    &:before {
+        content: $icon-logo-path13;
+        margin-left: -4.8876953125em;
+        color: rgb(209, 50, 57);
+    }
+}
+
+.icon-logo .path14 {
+    &:before {
+        content: $icon-logo-path14;
+        margin-left: -4.8876953125em;
+    }
+}
+
+.icon-search {
+    &:before {
+        content: $icon-search;
+    }
+}
+
+.icon-twitter {
+    &:before {
+        content: $icon-twitter;
+    }
+}
+
+.icon-facebook {
+    &:before {
+        content: $icon-facebook;
+    }
+}
+
+.icon-google {
+    &:before {
+        content: $icon-google;
+    }
+}
+
+.icon-linkedin {
+    &:before {
+        content: $icon-linkedin;
+    }
+}
+
+.icon-angle-left {
+    &:before {
+        content: $icon-angle-left;
+    }
+}
+
+.icon-angle-right {
+    &:before {
+        content: $icon-angle-right;
+    }
+}
+
+.icon-angle-up {
+    &:before {
+        content: $icon-angle-up;
+    }
+}
+
+.icon-angle-down {
+    &:before {
+        content: $icon-angle-down;
+    }
+}
+
+.icon-play {
+    &:before {
+        content: $icon-play;
+    }
+}
+
+.icon-youtube {
+    &:before {
+        content: $icon-youtube;
+    }
+}
+
+.icon-vimeo {
+    &:before {
+        content: $icon-vimeo;
+    }
+}
+
+.icon-arrow-right {
+    &:before {
+        content: $icon-arrow-right;
+    }
+}
+
+.icon-close {
+    &:before {
+        content: $icon-close;
+    }
+}

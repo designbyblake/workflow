@@ -1,0 +1,50 @@
+/*
+ * Theme Name: My Timber Starter Theme
+ * Description: Starter Theme to use with Timber
+ * Author: Upstatement and YOU!
+*/
+
+@import "_old_jake";
+@import "_variables";
+@import "_typography";
+//@import "_reset";
+@import "_mq";
+.clearfix:after,
+.clearfix:before {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.access,
+.noreveal:focus,
+.noreveal:hover,
+.noreveal:active {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+button {
+    border: 0;
+    padding: 0;
+    background: none;
+    border-radius: 0;
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+}
+
+body {
+    font-feature-settings: "liga" 0;
+}
+
+@import "_animate";
+@import "_modules";
